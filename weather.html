@@ -17,7 +17,21 @@
         <div id='curr-temp' class='bdr-radius color-tile'>
             <h3 id='temp-label'>Current Temp.</h3>
             <h4 id='temp'>32</h4>
-            <h4>make f to c switch</h4>
+            <h4>Switch metric type</h4>
+            <button id='F' class='btn-units bdr-radius btn-selected' onclick="changeTempUnit('F')">Fahrenheit</button>
+            <button id='C' class='btn-units bdr-radius' onclick="changeTempUnit('C')">Celsius</button>
+            <button id='K' class='btn-units bdr-radius' onclick="changeTempUnit('K')">Kelvin</button>
+            <div id='hi-lo'>
+                <div id='today-hi' class='hi-lo bdr-radius'>
+                    <h5>Today's High</h5>
+                    <p id='temp-hi'>12</p>
+                </div>
+                <div id='today-low' class='hi-lo bdr-radius'>
+                    <h5>Today's Low</h5>
+                    <p id='temp-low'>5</p>
+                </div>
+            </div>
+            
         </div>
         <div id='forecast' class='bdr-radius color-tile'>Forcast Written Out</div>
         <div id='curr-sun' class='bdr-radius color-tile'>Sunrise and Sunset</div>

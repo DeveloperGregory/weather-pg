@@ -12,8 +12,32 @@ body{
     border-radius: 10px;
 }
 
+.btn-units{
+    background-color:white;
+    border-style: none;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 30%;
+}
+
+.btn-selected{
+    background-color:rgb(0, 127, 212);
+    
+}
+
 .color-tile{
     background-color: var(--tile-bg);
+}
+
+.hi-lo{
+    border-style: solid;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0px, auto;
+    padding: 0px, 20px;
+    text-align: center;
+    width: 100%;
 }
 
 #close-btn{
@@ -26,7 +50,7 @@ body{
 #curr-temp{
     grid-column: 1/1;
     padding: 10px;
-    
+    text-align: center;
 }
 
 #curr-sun{
@@ -56,8 +80,21 @@ body{
     padding: 10px;
 }
 
+#hi-lo{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    
+}
+
 #navbar{
     background-color: blueviolet;
     display: inline-block;
     width: 100vw;
+}
+
+#temp{
+    font-size: 32pt;
+    margin: 0px;
 }
