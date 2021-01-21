@@ -18,6 +18,7 @@
             <h3 id='city'></h3>
             <h3 id='temp-label'>Current Temp.</h3>
             <h4 id='temp'>32</h4>
+            <h4 id='weather'>Weather</h4>
             <h4>Switch metric type</h4>
             <button id='F' class='btn-units bdr-radius btn-selected' onclick="changeTempUnit('F')">Fahrenheit</button>
             <button id='C' class='btn-units bdr-radius' onclick="changeTempUnit('C')">Celsius</button>
@@ -38,6 +39,10 @@
         <div id='curr-sun' class='bdr-radius color-tile'>
             <p id='sun-up'>Sunrise: </p>
             <p id='sun-down'>Sundown: </p>
+        </div>
+        <div id='press-wind' class='color-tile bdr-radius'>
+            <p id='pressure'>Pressure:</p>
+            <p>Wind:</p>
         </div>
     </div>
     <div id='3-day'>
