@@ -81,7 +81,7 @@ function showPosition(position){
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
     
-    let weatherUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon="+ longitude +"&appid=24989b7332754679000a03e31d764ab3";
+    let weatherUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon="+ longitude +"&appid=";
 
     fetch(weatherUrl)
         .then(response => response.json())
