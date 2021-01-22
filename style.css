@@ -1,5 +1,6 @@
 :root{
     --tile-bg: rgba(255, 255, 255, 0.705);
+    --glass-bg: rgba(0, 102, 255, 0.6);
 }
 
 body{
@@ -40,11 +41,44 @@ body{
     width: 100%;
 }
 
+.center-text{
+    text-align: center;
+}
+
+
 #close-btn{
     background-color: aliceblue;
-    position: fixed;
+    padding: 7px;
+    
+}
+
+#close-container{
+    grid-column: 4/5;
+    grid-row: 1/2;
     padding: 10px;
-    right: 5px;
+    margin: 0px;
+}
+
+#location{
+    margin-top: -20px;
+}
+
+#location-label{
+    margin-top: 3px;
+}
+
+#page-title{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5px;
+    margin: -20px;
+}
+
+#search-bar{
+    grid-column: 2/ span 2;
+    grid-row: 1/2;
+    padding: 10px;
+    margin: 0px;
 }
 
 #curr-temp{
@@ -62,7 +96,7 @@ body{
 }
 
 #curr-weather{
-    background-color: rgba(0, 102, 255, 0.6);
+    background-color: var(--glass-bg);
     border-style: outset;
     display: grid;
     grid-template-columns: auto, auto, auto, auto;
@@ -74,6 +108,10 @@ body{
     margin-right: auto;
     padding: 20px;
     width: 60%;
+}
+
+#dirArrow{
+    transform: rotate(-45deg);
 }
 
 #forecast{
@@ -98,8 +136,12 @@ body{
 }
 
 #navbar{
-    background-color: blueviolet;
-    display: inline-block;
+    background-color: var(--glass-bg);
+    display: grid;
+    align-content: start;
+    grid-template-rows: auto;
+    grid-column-gap: 5px;
+    height: 60px;
     width: 100vw;
 }
 

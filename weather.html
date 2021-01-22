@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
     <title>Weather Page</title>
 </head>
 <body>
-    <div id='navbar'>
-        <nav id='close-container'>
+    <nav id='navbar'>
+        <div id='close-container' class='center-text'>
             <a href="#" id='close-btn' class='bdr-radius'>Close Page</a>
-        </nav>
-        <h2>The Weather Page</h2>
-    </div>
+        </div>
+        <div id='search-bar' class='center-text'>
+            <input type="text" id='location'>
+            <button id='btn-location'>See Weather</button>
+            <p id='location-label'>Enter a City, State or ZIP Code to see the weather there</p>
+        </div>
+        <div id='page-title' class='center-text'>
+            <h2>The Weather Page</h2>
+        </div>
+    </nav>
     <div id='curr-weather' class='bdr-radius'>
         <div id='curr-temp' class='bdr-radius color-tile'>
             <h3 id='city'></h3>
@@ -42,7 +50,7 @@
         </div>
         <div id='press-wind' class='color-tile bdr-radius'>
             <p id='pressure'>Pressure:</p>
-            <p>Wind:</p>
+            <p>Wind: <i id='dirArrow' class="fas fa-location-arrow"></i><span id='wind-speed'></span></p>
         </div>
     </div>
     <div id='3-day'>
