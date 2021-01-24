@@ -45,11 +45,17 @@ body{
     text-align: center;
 }
 
+.fc-style{
+    margin-top: 5px;
+    padding: 10px;    
+}
+
 
 #close-btn{
     background-color: aliceblue;
+    color:rgb(0, 102, 255);
     padding: 7px;
-    
+    text-decoration: none;
 }
 
 #close-container{
@@ -57,6 +63,18 @@ body{
     grid-row: 1/2;
     padding: 10px;
     margin: 0px;
+}
+
+#forecast{
+    height: 70vh;
+    overflow: scroll;
+
+}
+
+#forecast-ul{
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 #location{
