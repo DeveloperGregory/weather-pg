@@ -9,6 +9,8 @@ const pressureLbl = document.getElementById('pressure')
 const dirArrow = document.getElementById('dirArrow');
 const windSpeedLbl = document.getElementById('wind-speed');
 const forecastUL = document.getElementById('forecast-ul');
+const newLoc = document.getElementById('location');
+const newLocationBtn = document.getElementById('btn-location');
 
 
 let currTempUnit = 'F';
@@ -92,7 +94,9 @@ function logTempData(tempData){
     showTemp();
 }
 
-
+function logLocationData(){
+    
+}
 
 function logForecastData(forecastData){
     console.log(forecastData);
@@ -114,11 +118,8 @@ function getLocation() {
       console.log("Geolocation is not supported by this browser.");
     }
   }
-  
-function showPosition(position){
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-    
+ 
+function getWeatherData(latitude, longitude){
     let weatherUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon="+ longitude +"&appid=";
 
     fetch(weatherUrl)
@@ -131,6 +132,29 @@ function showPosition(position){
         .then(response => response.json())
         .then(data => logForecastData(data));
 }
+  
+function showPosition(position){
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+    getWeatherData(latitude, longitude);
+}
+
+function getCoordinates(address){
+    fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+address+'&key=')
+      .then(response => response.json())
+      .then(data => {
+        const latitude = data.results[0].geometry.location.lat;
+        const longitude = data.results[0].geometry.location.lng;
+        getWeatherData(latitude,longitude);
+      })
+  }
+
+function changeLoc(){
+    let newLocation = newLoc.value;
+    getCoordinates(newLocation)
+    
+}
+
 
 getLocation();
 
