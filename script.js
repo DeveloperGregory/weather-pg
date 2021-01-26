@@ -11,7 +11,14 @@ const windSpeedLbl = document.getElementById('wind-speed');
 const forecastUL = document.getElementById('forecast-ul');
 const newLoc = document.getElementById('location');
 const newLocationBtn = document.getElementById('btn-location');
+const currTempDiv = document.getElementById('curr-temp');
 
+let weatherIcon = {
+    Cloudy : "/images/clouds.svg",
+    Rain: "images/raining.svg",
+    Snow : "images/snowy.svg",
+    Clear : "images/sunny.svg"
+}
 
 let currTempUnit = 'F';
 let currTemp;
@@ -66,7 +73,7 @@ function showTemp(){
     pressureLbl.innerHTML = "Pressure: " + ((pressure/3386)*100).toFixed(2) + " inHg";
     windSpeedLbl.innerHTML =  `  ${compassDirection()} at ${windSpeed}mph`;
     dirArrow.style.transform = 'rotate(' + (direction-45) + "deg)";
-    
+    currTempDiv.style.backgroundImage = "url(" + weatherIcon[weather] + ")";
 }
 
 function showForecast(){

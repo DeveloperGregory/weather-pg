@@ -166,4 +166,8 @@ body{
 #temp{
     font-size: 32pt;
     margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 2px 2px #ffffff;
+    width: 60%;
 }
